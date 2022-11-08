@@ -98,7 +98,7 @@ Resources:
     Type: AWS::CloudFormation::Stack
     Condition: InstallForwarder
     Properties:
-      TemplateURL: "https://datadog-cloudformation-template.s3.amazonaws.com/aws/forwarder/latest.yaml"
+      TemplateURL: "https://raw.githubusercontent.com/securitydoggo/cloudformation-template/master/aws_quickstart/datadog_aws_forwarder.yaml""
       Parameters:
         DdApiKey: !Ref APIKey
         DdSite: !Ref DatadogSite
