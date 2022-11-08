@@ -134,7 +134,7 @@ Resources:
   ForwarderStack:
     Type: AWS::CloudFormation::Stack
     Properties:
-      TemplateURL: "https://datadog-cloudformation-template.s3.amazonaws.com/aws/forwarder/latest.yaml"
+      TemplateURL: "https://raw.githubusercontent.com/securitydoggo/cloudformation-template/master/aws_quickstart/datadog_aws_forwarder.yaml"
       Parameters:
         DdApiKey: !Ref DdApiKey
         DdApiKeySecretArn: !If [WillCreateDdApiKeySecretArn, "arn:aws:secretsmanager:DEFAULT", !Ref DdApiKeySecretArn]
